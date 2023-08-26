@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.new {
+	@apply rounded-md bg-neutral-lightGrayishBlueOne;
+}
+
+.single-notification {
+	@apply p-4;
+}

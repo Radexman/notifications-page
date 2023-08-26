@@ -12,7 +12,6 @@ const getNotificationAmount = (list: NodeListOf<Element>): void => {
 	});
 
 	const amount = notificationArray.length.toString();
-
 	notificationsAmountEl.textContent = amount;
 };
 
@@ -25,7 +24,6 @@ const checkNotifications = (list: NodeListOf<Element>): void => {
 	});
 
 	const amount = notificationArray.length.toString();
-
 	notificationsAmountEl.textContent = amount;
 };
 
