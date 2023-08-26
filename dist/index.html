@@ -13,8 +13,35 @@
 		<!-- Outer Component Container -->
 		<div class="flex min-h-screen items-center justify-center bg-neutral-veryLigntGrayishBlue">
 			<!-- Card Component -->
-			<div class="max-w-3xl rounded-xl bg-neutral-white p-4">
+			<div class="h-screen w-full rounded-none bg-neutral-white p-5 md:h-min md:max-w-3xl md:rounded-xl">
 				<!-- Notification Informations Container -->
+				<div class="flex items-center justify-between">
+					<!-- Notifications State -->
+					<div class="flex items-center gap-3">
+						<h1 class="text-xl font-bold">Notifications</h1>
+						<div class="text-md w-8 rounded-md bg-primary-blue text-center font-bold text-neutral-white" id="notification-amount"></div>
+					</div>
+					<!-- Notifications Button -->
+					<button
+						aria-label="Clear all notifications"
+						class="text-neutral-darkGrayishBlue transition-all duration-200 hover:text-primary-blue"
+						id="notification-reset"
+					>
+						Mark all as read
+					</button>
+				</div>
+
+				<!-- Notifications List -->
+				<div class="">
+					<ul>
+						<li class="new">Post</li>
+						<li class="new">Post</li>
+						<li class="new">Post</li>
+						<li class="new">Post</li>
+						<li class="new">Post</li>
+						<li class="">Post</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</body>
