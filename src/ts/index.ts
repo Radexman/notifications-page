@@ -8,6 +8,10 @@ const getNotificationAmount = (list: NodeListOf<Element>): void => {
 	list.forEach((item) => {
 		if (item.classList.contains('new')) {
 			notificationArray.push(item);
+
+			const div = document.createElement('div');
+			div.classList.add('notification-dot');
+			item.firstElementChild?.lastElementChild.firstElementChild.append(div);
 		}
 	});
 
@@ -20,6 +24,7 @@ const checkNotifications = (list: NodeListOf<Element>): void => {
 		if (item.classList.contains('new')) {
 			notificationArray.splice(index);
 			item.classList.remove('new');
+			item.firstElementChild?.lastElementChild?.firstElementChild?.lastElementChild.remove();
 		}
 	});
 

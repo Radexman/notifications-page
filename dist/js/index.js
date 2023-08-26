@@ -7,6 +7,9 @@ const getNotificationAmount = (list) => {
     list.forEach((item) => {
         if (item.classList.contains('new')) {
             notificationArray.push(item);
+            const div = document.createElement('div');
+            div.classList.add('notification-dot');
+            item.firstElementChild?.lastElementChild.firstElementChild.append(div);
         }
     });
     const amount = notificationArray.length.toString();
@@ -17,6 +20,7 @@ const checkNotifications = (list) => {
         if (item.classList.contains('new')) {
             notificationArray.splice(index);
             item.classList.remove('new');
+            item.firstElementChild?.lastElementChild?.firstElementChild?.lastElementChild.remove();
         }
     });
     const amount = notificationArray.length.toString();

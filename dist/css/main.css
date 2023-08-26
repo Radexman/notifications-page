@@ -540,12 +540,20 @@ video {
   min-height: 100vh;
 }
 
+.w-16{
+  width: 4rem;
+}
+
 .w-8{
   width: 2rem;
 }
 
 .w-full{
   width: 100%;
+}
+
+.items-start{
+  align-items: flex-start;
 }
 
 .items-center{
@@ -568,10 +576,22 @@ video {
   gap: 0.75rem;
 }
 
+.space-x-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .rounded-md{
@@ -601,6 +621,14 @@ video {
   padding: 1.25rem;
 }
 
+.pl-1{
+  padding-left: 0.25rem;
+}
+
+.pr-1{
+  padding-right: 0.25rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
@@ -609,9 +637,19 @@ video {
   text-align: center;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold{
@@ -623,9 +661,24 @@ video {
   color: hsl(219 12% 42% / var(--tw-text-opacity));
 }
 
+.text-neutral-veryDarkBlue{
+  --tw-text-opacity: 1;
+  color: hsl(224 21% 14% / var(--tw-text-opacity));
+}
+
 .text-neutral-white{
   --tw-text-opacity: 1;
   color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.text-neutral-lightGrayishBlueOne{
+  --tw-text-opacity: 1;
+  color: hsl(211 68% 94% / var(--tw-text-opacity));
+}
+
+.text-neutral-grayishBlue{
+  --tw-text-opacity: 1;
+  color: hsl(219 14% 63% / var(--tw-text-opacity));
 }
 
 .transition-all{
@@ -648,6 +701,16 @@ video {
   padding: 1rem;
 }
 
+.notification-dot{
+  margin-top: 0.5rem;
+  display: inline-block;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(1 90% 64% / var(--tw-bg-opacity));
+}
+
 .hover\:text-primary-blue:hover{
   --tw-text-opacity: 1;
   color: hsl(219 85% 26% / var(--tw-text-opacity));
@@ -659,11 +722,20 @@ video {
     height: min-content;
   }
 
+  .md\:w-14{
+    width: 3.5rem;
+  }
+
   .md\:max-w-3xl{
     max-width: 48rem;
   }
 
   .md\:rounded-xl{
     border-radius: 0.75rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

@@ -10,3 +10,7 @@
 .single-notification {
 	@apply p-4;
 }
+
+.notification-dot {
+	@apply mt-2 inline-block h-3 w-3 rounded-full bg-primary-red;
+}
