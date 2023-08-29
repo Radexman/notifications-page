@@ -1,28 +1,32 @@
 "use strict";
+// Global Variables
 const notificationsAmountEl = document.getElementById('notification-amount');
 const notificationsResetEl = document.getElementById('notification-reset');
 const notificationListEl = document.querySelectorAll('ul li');
+// Array with the app state
 const notificationArray = [];
+// Rendering new notifications
 const getNotificationAmount = (list) => {
     list.forEach((item) => {
         if (item.classList.contains('new')) {
             notificationArray.push(item);
             const div = document.createElement('div');
             div.classList.add('notification-dot');
-            const container = item.firstElementChild?.lastElementChild?.firstElementChild;
-            container.append(div);
+            const container = item.firstElementChild.lastElementChild.firstElementChild;
+            container?.appendChild(div);
         }
     });
     const amount = notificationArray.length.toString();
     notificationsAmountEl.textContent = amount;
 };
+// Unmarking new notifications
 const checkNotifications = (list) => {
     list.forEach((item, index) => {
         if (item.classList.contains('new')) {
             notificationArray.splice(index);
             item.classList.remove('new');
-            const container = item.firstElementChild?.lastElementChild?.firstElementChild;
-            container.remove();
+            const container = item.firstElementChild.lastElementChild.firstElementChild?.lastElementChild;
+            container?.remove();
         }
     });
     const amount = notificationArray.length.toString();
